@@ -3,567 +3,383 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3794358031800220"
-crossorigin="anonymous"></script>
-
-<title>FeedTheWorld | Finance & Digital Economy News</title>
-
+<meta name="description" content="FeedTheWorld - Your ultimate guide to mastering the digital economy, trading, and financial technology.">
+<!-- Google AdSense Auto Ads Script - DO NOT REMOVE -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3794358031800220" crossorigin="anonymous"></script>
+<title>FeedTheWorld | Master the Digital Economy</title>
 <style>
-/* RESET & BASE VARIABLES */
-:root {
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
-    --bg-header: #020617;
-    --accent: #38bdf8;
-    --accent-hover: #0ea5e9;
-    --text-main: #e2e8f0;
-    --text-muted: #94a3b8;
-    --border-color: rgba(255,255,255,0.08);
+:root { 
+    --bg-dark: #0f172a; 
+    --bg-card: #1e293b; 
+    --bg-header: #020617; 
+    --accent: #38bdf8; 
+    --text-main: #e2e8f0; 
+    --text-muted: #94a3b8; 
+    --border-color: rgba(255,255,255,0.08); 
+}
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background: var(--bg-dark); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    margin: 0; 
+}
+header { 
+    background: var(--bg-header); 
+    padding: 20px 40px; 
+    border-bottom: 1px solid var(--border-color); 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+}
+nav { 
+    max-width: 1250px; 
+    margin: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo { 
+    font-size: 28px; 
+    font-weight: 800; 
+    color: var(--accent); 
+    text-decoration: none; 
+}
+.logo span { color: white; }
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+    margin: 0; 
+    padding: 0; 
+}
+nav a { 
+    color: var(--text-main); 
+    text-decoration: none; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    font-size: 14px; 
+    transition: color 0.3s; 
+}
+nav a:hover { color: var(--accent); }
+
+/* Hero Section */
+.hero { 
+    text-align: center; 
+    padding: 80px 20px; 
+    background: linear-gradient(180deg, var(--bg-header) 0%, var(--bg-dark) 100%); 
+}
+.hero h1 { 
+    font-size: 50px; 
+    color: white; 
+    margin: 0 0 20px 0; 
+    line-height: 1.2; 
+}
+.hero p { 
+    font-size: 20px; 
+    color: var(--text-muted); 
+    max-width: 700px; 
+    margin: 0 auto; 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Main Content & Grid */
+.container { 
+    max-width: 1250px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+.section-title { 
+    font-size: 32px; 
+    color: white; 
+    margin-bottom: 30px; 
+    border-left: 5px solid var(--accent); 
+    padding-left: 15px; 
+}
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 30px; 
 }
 
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-main);
-    line-height: 1.6;
+/* Article Cards */
+.card { 
+    background: var(--bg-card); 
+    border-radius: 12px; 
+    overflow: hidden; 
+    border: 1px solid var(--border-color); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    display: flex; 
+    flex-direction: column; 
 }
-
-a {
-    text-decoration: none;
-    color: var(--text-main);
-    transition: 0.2s;
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+    border-color: var(--accent); 
 }
-
-/* NAVBAR */
-header {
-    background: var(--bg-header);
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
+.card-img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
 }
-
-nav {
-    max-width: 1250px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.card-content { 
+    padding: 25px; 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
 }
-
-.logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--accent);
-    letter-spacing: -0.5px;
+.card-category { 
+    color: var(--accent); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-size: 12px; 
+    margin-bottom: 10px; 
 }
-
-.logo span {
-    color: white;
+.card-title { 
+    font-size: 22px; 
+    color: white; 
+    margin: 0 0 15px 0; 
+    line-height: 1.3; 
 }
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+.card-desc { 
+    color: var(--text-muted); 
+    font-size: 15px; 
+    margin-bottom: 20px; 
+    flex-grow: 1; 
 }
-
-nav a {
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.read-more { 
+    display: inline-block; 
+    background: var(--accent); 
+    color: #020617; 
+    padding: 10px 20px; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    text-align: center; 
+    transition: background 0.3s; 
 }
+.read-more:hover { background: white; }
 
-nav a:hover {
-    color: var(--accent);
+/* Footer */
+footer { 
+    background: var(--bg-header); 
+    padding: 40px 20px; 
+    text-align: center; 
+    border-top: 1px solid var(--border-color); 
+    margin-top: 80px; 
 }
-
-/* FEATURED HERO ARTICLE */
-.hero-wrapper {
-    max-width: 1250px;
-    margin: 30px auto;
-    padding: 0 20px;
+.footer-links { 
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
 }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
+.footer-links a:hover { color: var(--accent); }
 
-.featured-hero {
-    height: 500px;
-    border-radius: 12px;
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.3) 50%, rgba(2, 6, 23, 0.1) 100%),
-                url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1600&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    padding: 40px;
-    overflow: hidden;
-    position: relative;
-}
-
-.category-tag {
-    background: var(--accent);
-    color: #000;
-    padding: 5px 12px;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    display: inline-block;
-}
-
-.hero-content {
-    max-width: 800px;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 46px;
-    margin-bottom: 15px;
-    color: white;
-    line-height: 1.1;
-}
-
-.hero-content p {
-    font-size: 18px;
-    color: #cbd5e1;
-    margin-bottom: 25px;
-}
-
-.read-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: var(--accent);
-    color: var(--bg-dark);
-    font-weight: bold;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.read-btn:hover {
-    background: white;
-}
-
-/* MAIN LAYOUT GRID (Magazine Style) */
-.main-container {
-    max-width: 1250px;
-    margin: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 2.3fr 1fr;
-    gap: 40px;
-}
-
-.section-title {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: white;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.section-title::before {
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background: var(--accent);
-    margin-right: 10px;
-    border-radius: 2px;
-}
-
-/* POSTS GRID */
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-}
-
-.post-card {
-    background: var(--bg-card);
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: 0.3s;
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.post-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.post-info {
-    padding: 20px;
-}
-
-.post-info .meta {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 10px;
-}
-
-.post-info h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: white;
-    line-height: 1.3;
-}
-
-.post-info p {
-    color: var(--text-muted);
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* SIDEBAR */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.widget {
-    background: var(--bg-card);
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-}
-
-.widget h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: white;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-}
-
-.trending-list {
-    list-style: none;
-}
-
-.trending-list li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.trending-list li:last-child {
-    border-bottom: none;
-}
-
-.trending-num {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--border-color);
-}
-
-.trending-list a {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.trending-list a:hover {
-    color: var(--accent);
-}
-
-/* AD PLACEHOLDER */
-.ad-space {
-    background: rgba(255,255,255,0.05);
-    border: 1px dashed var(--text-muted);
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 12px;
-    text-align: center;
-}
-
-/* FOOTER & NEWSLETTER */
-footer {
-    background: var(--bg-header);
-    padding: 60px 20px 30px;
-    margin-top: 60px;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
-    max-width: 1250px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 40px;
-}
-
-.newsletter h3 {
-    color: white;
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-.newsletter p {
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.subscribe-form {
-    display: flex;
-    gap: 10px;
-}
-
-.subscribe-form input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid var(--border-color);
-    background: var(--bg-dark);
-    color: white;
-    border-radius: 6px;
-    outline: none;
-}
-
-.subscribe-form button {
-    padding: 12px 25px;
-    background: var(--accent);
-    border: none;
-    color: var(--bg-dark);
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.footer-links {
-    text-align: right;
-}
-
-.footer-links a {
-    display: inline-block;
-    margin-left: 20px;
-    color: var(--text-muted);
-    font-weight: 600;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.copyright {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 14px;
-    border-top: 1px solid var(--border-color);
-    padding-top: 20px;
-}
-
-/* MOBILE RESPONSIVENESS */
-@media(max-width: 992px) {
-    .main-container {
-        grid-template-columns: 1fr;
-    }
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-links {
-        text-align: center;
-        margin-top: 20px;
-    }
-    .footer-links a {
-        margin: 0 10px;
-    }
-}
-
-@media(max-width: 768px) {
-    .hero-content h1 {
-        font-size: 32px;
-    }
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .featured-hero {
-        padding: 20px;
-        height: 400px;
-    }
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    nav { flex-direction: column; gap: 15px; }
+    .hero h1 { font-size: 36px; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<nav>
-    <div class="logo">Feed<span>TheWorld</span></div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="markets.html">Markets</a></li>
-        <li><a href="tech.html">Tech</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <nav>
+        <a href="index.html" class="logo">Feed<span>TheWorld</span></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- FEATURED STORY -->
-<div class="hero-wrapper">
-    <div class="featured-hero">
-        <div class="hero-content">
-            <span class="category-tag">Global Markets</span>
-            <h1>Weekly Market Recap: Tech Resilience and Global Shifts</h1>
-            <p>An in-depth analysis of how major technology stocks and digital assets are weathering the current macroeconomic environment.</p>
-            <a href="post1.html" class="read-btn">Read Full Story</a>
-        </div>
+<section class="hero">
+    <h1>Master the Digital Economy</h1>
+    <p>Direct, simple, and professional strategies for trading, finance, and building wealth in the modern world.</p>
+</section>
+
+<div class="container">
+    <h2 class="section-title">Latest Knowledge & Guides</h2>
+    
+    <div class="grid">
+        <!-- Post 1 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=800" class="card-img" alt="Bitcoin and Cryptocurrency">
+            <div class="card-content">
+                <span class="card-category">Crypto Basics</span>
+                <h3 class="card-title">The Complete Beginner's Guide to Cryptocurrency</h3>
+                <p class="card-desc">Start here. Learn exactly how Bitcoin, Ethereum, and blockchain networks operate using simple terms.</p>
+                <a href="post1.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800" class="card-img" alt="Trading Charts">
+            <div class="card-content">
+                <span class="card-category">Technical Analysis</span>
+                <h3 class="card-title">Top 5 Indicators Every Trader Must Know</h3>
+                <p class="card-desc">Master the tools of the trade. A direct breakdown of EMA, RSI, MACD, and Bollinger Bands.</p>
+                <a href="post2.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800" class="card-img" alt="Risk Management">
+            <div class="card-content">
+                <span class="card-category">Risk Management</span>
+                <h3 class="card-title">How to Protect Your Capital: Stop Loss Strategies</h3>
+                <p class="card-desc">The most important rule in trading: protect your money. Learn how to calculate and set a proper Stop Loss (SL).</p>
+                <a href="post3.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800" class="card-img" alt="YouTube Growth">
+            <div class="card-content">
+                <span class="card-category">Content Strategy</span>
+                <h3 class="card-title">Cracking the YouTube Algorithm in 2026</h3>
+                <p class="card-desc">A deep dive into the metrics that drive multimillion-view growth, from CTR to audience retention.</p>
+                <a href="post4.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800" class="card-img" alt="Digital Marketing">
+            <div class="card-content">
+                <span class="card-category">Marketing</span>
+                <h3 class="card-title">Telegram Marketing: Building a Loyal Community</h3>
+                <p class="card-desc">Learn how to run highly effective 24-hour promotional campaigns and convert followers into dedicated students.</p>
+                <a href="post5.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" class="card-img" alt="Professional Setup">
+            <div class="card-content">
+                <span class="card-category">Mindset</span>
+                <h3 class="card-title">The Millionaire Trader Mindset</h3>
+                <p class="card-desc">Trading is 80% psychology. Discover the mental frameworks required to execute trades without emotion.</p>
+                <a href="post6.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 7 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=800" class="card-img" alt="Trading Platforms">
+            <div class="card-content">
+                <span class="card-category">Binary Options</span>
+                <h3 class="card-title">Binary Options: Platform Setup and Execution</h3>
+                <p class="card-desc">Step-by-step instructions on setting up your first broker account and executing clean, precise trades.</p>
+                <a href="post7.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 8 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=800" class="card-img" alt="AI Analytics">
+            <div class="card-content">
+                <span class="card-category">FinTech</span>
+                <h3 class="card-title">Testing AI-Driven Trading Signals</h3>
+                <p class="card-desc">Can algorithms compound your account? We look at the reality of AI signals and how to verify their accuracy.</p>
+                <a href="post8.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 9 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" class="card-img" alt="Digital Skills">
+            <div class="card-content">
+                <span class="card-category">Digital Economy</span>
+                <h3 class="card-title">Top 10 High-Income Digital Skills</h3>
+                <p class="card-desc">The traditional degree is changing. These are the top ten digital skills you need to secure a high-income future.</p>
+                <a href="post9.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 10 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1522071823916-d4469e88d0ed?q=80&w=800" class="card-img" alt="Remote Work">
+            <div class="card-content">
+                <span class="card-category">Career Trends</span>
+                <h3 class="card-title">Remote Work 2026: The Global Talent Shift</h3>
+                <p class="card-desc">Navigate the borderless economy. Understand asynchronous work, deep work, and global compliance.</p>
+                <a href="post10.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 11 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800" class="card-img" alt="Stock Market Board">
+            <div class="card-content">
+                <span class="card-category">Trading Mastery</span>
+                <h3 class="card-title">The Psychology of Trading: The Mental Edge</h3>
+                <p class="card-desc">Learn how to identify cognitive biases and use a neutral mindset to treat losses simply as business expenses.</p>
+                <a href="post11.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 12 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800" class="card-img" alt="Green Plant growing from coins">
+            <div class="card-content">
+                <span class="card-category">Global Finance</span>
+                <h3 class="card-title">Sustainable Investing: Profit with Purpose</h3>
+                <p class="card-desc">A complete guide to ESG investing, green bonds, and aligning your portfolio with environmental progress.</p>
+                <a href="post12.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 13 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800" class="card-img" alt="Abstract AI and Technology">
+            <div class="card-content">
+                <span class="card-category">FinTech</span>
+                <h3 class="card-title">AI in Finance: The 2026 Revolution</h3>
+                <p class="card-desc">How robo-advisors, algorithmic sentiment analysis, and machine learning are reshaping wealth management.</p>
+                <a href="post13.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 14 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800" class="card-img" alt="Modern Architecture">
+            <div class="card-content">
+                <span class="card-category">Asset Management</span>
+                <h3 class="card-title">Real Estate vs. Digital Real Estate</h3>
+                <p class="card-desc">Compare the leverage of physical property against the massive cash flow potential of digital assets.</p>
+                <a href="post14.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
+        <!-- Post 15 -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1473186578172-c141e6798ee4?q=80&w=800" class="card-img" alt="Relaxing on a beach">
+            <div class="card-content">
+                <span class="card-category">Personal Finance</span>
+                <h3 class="card-title">Retirement Planning in the Digital Age</h3>
+                <p class="card-desc">Update your portfolio beyond the 60/40 rule. A modern approach to FIRE, tax efficiency, and long-term health.</p>
+                <a href="post15.html" class="read-more">Read Guide</a>
+            </div>
+        </article>
+
     </div>
 </div>
 
-<main class="main-container">
-
-    <!-- LEFT COLUMN: MAIN CONTENT -->
-    <div class="main-content">
-        
-        <h2 class="section-title">Digital Economy & Skills</h2>
-        <div class="posts-grid">
-            
-            <div class="post-card">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Data Analytics">
-                <div class="post-info">
-                    <div class="meta">MAY 14, 2026 • DIGITAL SKILLS</div>
-                    <h3><a href="post8.html">Mastering Data Analytics: The Highest Paying Skill of 2026</a></h3>
-                    <p>Why companies are paying premium rates for professionals who can interpret large datasets effectively.</p>
-                </div>
-            </div>
-
-            <div class="post-card">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" alt="Remote Work">
-                <div class="post-info">
-                    <div class="meta">MAY 12, 2026 • REMOTE WORK</div>
-                    <h3><a href="post10.html">Remote Work: Navigating the Global Talent Shift</a></h3>
-                    <p>How the borderless economy is allowing professionals to secure international contracts from home.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <h2 class="section-title">Tech Leadership & Startups</h2>
-        <div class="posts-grid">
-
-            <div class="post-card">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="AI Startups">
-                <div class="post-info">
-                    <div class="meta">MAY 10, 2026 • STARTUPS</div>
-                    <h3><a href="post16.html">Why Modern Startups Are Pivoting to Lean AI Models</a></h3>
-                    <p>A look at the funding trends and operational structures of the fastest-growing AI companies this quarter.</p>
-                </div>
-            </div>
-
-            <div class="post-card">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop" alt="Corporate Culture">
-                <div class="post-info">
-                    <div class="meta">MAY 08, 2026 • LEADERSHIP</div>
-                    <h3><a href="post20.html">Future-Proofing Corporate Culture in a Digital Age</a></h3>
-                    <p>Techniques modern executives are using to retain top talent and prevent burnout in distributed teams.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- RIGHT COLUMN: SIDEBAR -->
-    <aside class="sidebar">
-        
-        <!-- AdSense Placeholder Space -->
-        <div class="widget">
-            <div class="ad-space">
-                Advertisement Space<br>(AdSense Code Active)
-            </div>
-        </div>
-
-        <div class="widget">
-            <h3>Trending Analysis</h3>
-            <ul class="trending-list">
-                <li>
-                    <span class="trending-num">01</span>
-                    <a href="post2.html">The Impact of Interest Rates on Crypto Markets</a>
-                </li>
-                <li>
-                    <span class="trending-num">02</span>
-                    <a href="post5.html">Inflation Trends and Consumer Purchasing Power</a>
-                </li>
-                <li>
-                    <span class="trending-num">03</span>
-                    <a href="post12.html">Cybersecurity Essentials for Freelance Professionals</a>
-                </li>
-                <li>
-                    <span class="trending-num">04</span>
-                    <a href="post6.html">The Rise of Decentralized Finance (DeFi) Protocols</a>
-                </li>
-                <li>
-                    <span class="trending-num">05</span>
-                    <a href="post19.html">Venture Capital Trends in Early-Stage Fintech</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="widget">
-            <h3>Editor's Picks</h3>
-            <div class="post-card" style="border: none; background: transparent;">
-                <img style="height: 140px; border-radius: 6px;" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Investing">
-                <div class="post-info" style="padding: 15px 0 0 0;">
-                    <h3 style="font-size: 16px;"><a href="post3.html">Understanding ETF Portfolio Diversification Strategy</a></h3>
-                </div>
-            </div>
-        </div>
-
-    </aside>
-
-</main>
-
 <footer>
-    <div class="footer-content">
-        <div class="newsletter">
-            <h3>FeedTheWorld Newsletter</h3>
-            <p>Get weekly market updates, tech analysis, and digital economy insights delivered straight to your inbox.</p>
-            <div class="subscribe-form">
-                <input type="email" placeholder="Enter your email address">
-                <button>Subscribe</button>
-            </div>
-        </div>
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Editorial</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>© 2026 FeedTheWorld Publication. All Rights Reserved.</p>
+    <p>© 2026 FeedTheWorld. Education for Disciplined Growth.</p>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
     </div>
 </footer>
 
